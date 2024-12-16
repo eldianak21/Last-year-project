@@ -19,9 +19,9 @@ const Home = () => {
                     <li>Data Analytics Dashboard</li>
                 </ul>
                 <h2>Get Started</h2>
-                {/* <p>
+                <p>
                     To learn more about our system, visit the <Link to="/about">About</Link> page.
-                </p> */}
+                </p>
             </div>
         </div>
     );

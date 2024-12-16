@@ -10,7 +10,6 @@
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
     padding: 20px;
     border-radius: 8px; /* Optional rounded corners */
     text-align: center; /* Center text */
