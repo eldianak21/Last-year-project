@@ -1,0 +1,36 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: blue; /* Blue background */
+    color: white; /* White text */
+    width: 100%; /* Full width */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
