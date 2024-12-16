@@ -1,0 +1,47 @@
+/* src/Components/Job/Job.module.css */
+
+.job {
+    padding: 20px;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    font-family: 'Roboto', sans-serif; /* Use the same font family */
+}
+
+h1 {
+    color: blue; /* Header color */
+}
+
+.jobList {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.jobItem {
+    background: #f9f9f9; /* Light background for job items */
+    border: 1px solid #ddd; /* Border for job items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0; /* Space between job items */
+}
+
+h2 {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark color for job titles */
+}
+
+.jobItem p { /* Specific styles for job descriptions */
+    color: black; /* Set description text color to black */
+}
+
+.applyButton {
+    background-color: blue; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Cursor pointer on hover */
+}
+
+.applyButton:hover {
+    background-color: darkblue; /* Darker color on hover */
+}
