@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import styles from './header.module.css'; // Import as styles
 import logo from '../../assets/jimma-logo.png'; // Import the logo image
 
 const Header = () => {
     return (
-        <header className={styles.header}> {/* Use styles.header */}
+        <header className={styles.header}>
             <div className={styles.logo}>
-                <img src={logo} alt="Jimma University Logo" className={styles.logoImage} /> {/* Add image */}
+                <img src={logo} alt="Jimma University Logo" className={styles.logoImage} />
                 HR Management System
-            </div> {/* Use styles.logo */}
+            </div>
             <nav>
-                <ul className={styles['nav-links']}> {/* Use styles['nav-links'] */}
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/jobs">Jobs</a></li>
-                    <li><a href="/candidates">Candidates</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                <ul className={styles['nav-links']}>
+                    <li><Link to="/">Home</Link></li> {/* Use Link for navigation */}
+                    <li><Link to="/jobs">Jobs</Link></li>
+                    <li><Link to="/candidates">Candidates</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
         </header>

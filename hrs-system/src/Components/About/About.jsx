@@ -4,7 +4,7 @@ import styles from './About.module.css'; // Import your CSS module
 const About = () => {
     return (
         <div className={styles.about}>
-            <h1>About the HR Management System</h1>
+            <h2>About the HR Management System</h2>
             <p>
                 The HR Management System is designed to streamline and enhance recruitment processes within organizations. It aims to provide a comprehensive solution for managing human resources effectively and efficiently.
             </p>

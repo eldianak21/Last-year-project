@@ -1,0 +1,33 @@
+/* Home.module.css */
+.home {
+    padding: 20px;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    font-family: 'Roboto', sans-serif; /* Use the same font family */
+}
+
+h1 {
+    color: blue; /* Header color */
+}
+
+h2 {
+    margin-top: 20px; /* Space above subheadings */
+}
+
+p {
+    line-height: 1.6; /* Improve readability */
+}
+
+ul {
+    margin: 10px 0; /* Space above and below lists */
+    padding-left: 20px; /* Indent lists */
+}
+
+a {
+    color: blue; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
