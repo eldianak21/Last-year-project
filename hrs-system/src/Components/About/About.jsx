@@ -26,9 +26,17 @@ const About = () => {
                 By implementing this HR Management System, organizations can expect to see improved efficiency, reduced time-to-hire, better candidate experiences, and enhanced data security.
             </p>
             <h2>Contact Us</h2>
-            <p>
-                For more information or inquiries, please reach out via our support email.
-            </p>
+            <div className={styles.contact}>
+                <p>
+                    <a href="mailto:info@ju.edu.et">info@ju.edu.et</a>
+                </p>
+                <p>
+                    <a href="https://www.ju.edu.et" target="_blank" rel="noopener noreferrer">www.ju.edu.et</a>
+                </p>
+                <p>
+                    <a href="https://lnkd.in/gzgTMWNq" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                </p>
+            </div>
         </div>
     );
 };

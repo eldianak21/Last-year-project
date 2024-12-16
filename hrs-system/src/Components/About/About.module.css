@@ -1,33 +1,63 @@
 /* About.module.css */
+
 .about {
-    padding: 20px;
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the content */
-    font-family: 'Roboto', sans-serif; /* Use the same font family */
-}
-
-h1 {
-    color: blue; /* Header color */
-}
-
-h2 {
-    margin-top: 20px; /* Space above subheadings */
-}
-
-p {
-    line-height: 1.6; /* Improve readability */
-}
-
-ul {
-    margin: 10px 0; /* Space above and below lists */
-    padding-left: 20px; /* Indent lists */
-}
-
-a {
-    color: blue; /* Link color */
-    text-decoration: none; /* Remove underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    padding: 4rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1 {
+    color: #007bff; 
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    color: #007bff; 
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Hover animation, color change, and border */
+  .about > * {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent; /* Initial border is transparent */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .about > *:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: #007bff; /* Blue border on hover */
+  }
