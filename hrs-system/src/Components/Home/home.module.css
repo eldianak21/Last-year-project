@@ -1,21 +1,35 @@
 /* Home.module.css */
 .home {
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* For overlay positioning */
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
     padding: 20px;
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the content */
-    font-family: 'Roboto', sans-serif; /* Use the same font family */
+    border-radius: 8px; /* Optional rounded corners */
+    text-align: center; /* Center text */
+    color: white; /* Set text color to white */
 }
 
 h1 {
-    color: blue; /* Header color */
+    font-size: 2.5rem; /* Adjust font size */
+    color: white; /* Ensure h1 text is white */
 }
 
 h2 {
     margin-top: 20px; /* Space above subheadings */
+    color: white; /* Ensure h2 text is white */
 }
 
 p {
     line-height: 1.6; /* Improve readability */
+    color: white; /* Ensure paragraph text is white */
 }
 
 ul {
@@ -24,7 +38,7 @@ ul {
 }
 
 a {
-    color: blue; /* Link color */
+    color: #00bfff; /* Link color */
     text-decoration: none; /* Remove underline */
 }
 
