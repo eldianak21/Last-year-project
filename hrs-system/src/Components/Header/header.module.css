@@ -1,17 +1,27 @@
 /* Header.css */
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
     padding: 20px;
     background-color: blue; /* Blue background */
     color: white; /* White text */
-    width: 100%; /* Full width */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Include padding in width */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .logo {
+    display: flex; /* Use flexbox for logo and text */
+    align-items: center; /* Center logo vertically with text */
     font-size: 24px;
     font-weight: bold;
+    gap: 10px; /* Space between logo image and text */
+}
+
+.logoImage {
+    height: 40px; /* Set a height for the logo image */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .nav-links {
@@ -29,8 +39,21 @@
 .nav-links a {
     color: white; /* White text for links */
     text-decoration: none; /* Remove underline */
+    font-weight: 400; /* Regular weight for links */
 }
 
 .nav-links a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack logo and nav links on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
 }
