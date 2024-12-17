@@ -1,0 +1,51 @@
+/* src/Components/Contact/Contact.module.css */
+
+.contact {
+    padding: 20px;
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    font-family: 'Roboto', sans-serif; /* Use the same font family */
+}
+
+h1 {
+    color: blue; /* Header color */
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.formGroup {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+    color: #333; /* Label color */
+}
+
+input, textarea {
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.submitButton {
+    background-color: blue; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Cursor pointer on hover */
+}
+
+.submitButton:hover {
+    background-color: darkblue; /* Darker color on hover */
+}
