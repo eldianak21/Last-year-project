@@ -1,0 +1,43 @@
+/* src/Components/Candidates/Candidates.module.css */
+
+.candidates {
+    padding: 20px;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    font-family: 'Roboto', sans-serif; /* Use the same font family */
+}
+
+h1 {
+    color: blue; /* Header color */
+}
+
+.candidateList {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.candidateItem {
+    background: #f9f9f9; /* Light background for candidate items */
+    border: 1px solid #ddd; /* Border for candidate items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0; /* Space between candidate items */
+}
+
+h2 {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark color for candidate names */
+}
+
+.viewButton {
+    background-color: blue; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Cursor pointer on hover */
+}
+
+.viewButton:hover {
+    background-color: darkblue; /* Darker color on hover */
+}
