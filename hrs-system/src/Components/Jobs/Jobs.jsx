@@ -1,9 +1,12 @@
 // src/Components/Job/Job.jsx
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import styles from './job.module.css'; // Import your CSS module
 
 const Jobs = () => {
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+
     const jobListings = [
         {
             id: 1,
@@ -28,6 +31,11 @@ const Jobs = () => {
         },
     ];
 
+    // Function to handle the Apply Now button click
+    const handleApplyNow = () => {
+        navigate('/apply'); // Navigate to the ApplyNow page
+    };
+
     return (
         <div className={styles.job}>
             <h1>Job Listings</h1>
@@ -38,7 +46,9 @@ const Jobs = () => {
                         <p>{job.description}</p>
                         <p><strong>Location:</strong> {job.location}</p>
                         <p><strong>Date Posted:</strong> {job.datePosted}</p>
-                        <button className={styles.applyButton}>Apply Now</button>
+                        <button className={styles.applyButton} onClick={handleApplyNow}>
+                            Apply Now
+                        </button>
                     </li>
                 ))}
             </ul>

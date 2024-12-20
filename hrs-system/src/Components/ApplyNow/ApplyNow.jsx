@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ApplyNow.module.css';
-import interviewQuestions from '../../data/interviewQuestions';
+import interviewQuestions from '../Data/interviewQuestions'; // Ensure this path is correct
 
 const ApplyNow = () => {
     const [name, setName] = useState('');
@@ -11,6 +11,7 @@ const ApplyNow = () => {
     const [experience, setExperience] = useState('');
     const [position, setPosition] = useState('');
     const [answers, setAnswers] = useState({});
+    const [feedback, setFeedback] = useState('');
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -21,13 +22,27 @@ const ApplyNow = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle the submission logic here (e.g., send data to server)
-        console.log({ name, email, experience, position, answers });
-        
-        // Navigate back to the job listings or a success page
-        navigate('/job-listings'); // Change this to your desired route
+        try {
+            const response = await fetch('http://localhost:5000/evaluate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ answers }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            setFeedback(data.feedback); // Assuming your AI API returns feedback
+        } catch (error) {
+            console.error('Error submitting application:', error);
+            setFeedback('There was an error processing your application. Please try again later.');
+        }
     };
 
     return (
@@ -101,6 +116,13 @@ const ApplyNow = () => {
                 
                 <button type="submit">Submit Application</button>
             </form>
+
+            {feedback && (
+                <div className={styles.feedbackContainer}>
+                    <h2>Feedback</h2>
+                    <p>{feedback}</p>
+                </div>
+            )}
         </div>
     );
 };

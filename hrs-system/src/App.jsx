@@ -9,6 +9,7 @@ import Contact from './Components/Contact/Contact';
 import Login from './Components/UserAuth/Login';
 import SignUp from './Components/UserAuth/SignUp';
 import ForgotPassword from './Components/UserAuth/ForgotPassword';
+import ApplyNow from './Components/ApplyNow/ApplyNow';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/" element={<Home />} /> {/* Home page at root URL */}
                 <Route path="/about" element={<About />} /> {/* About page */}
                 <Route path="/jobs" element={<Jobs />} /> {/* About page */}
+                <Route path="/apply" element={<ApplyNow />} />
                 <Route path="/candidates" element={<Candidates />} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/login" element={<Login />} /> {/* About page */}
